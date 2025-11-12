@@ -1,0 +1,200 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); /* Inter */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis globais */
+:root {
+    /* Altura e largura do mainContainer */
+    --mainWitdh: 360px;
+    --mainHeight: 712px;
+
+    /* Cores | Modo escuro */
+    --textColor: #FFFFFF;
+    --buttonColor: rgba(255, 255, 255, 0.1);
+    --button_borderColor: rgba(255, 255, 255, 0.5);
+    --backgroundURL: url('../assets/bg-mobile.jpg');
+
+    /* Cores durante o evento de mousehover */
+    --buttonColor_hover: rgba(255, 255, 255, 0.05);
+    --button_borderColor_hover: #FFFFFF;
+    --icon_highlightColor: rgba(255, 255, 255, 0.2);
+
+    /* Imagem do switch | Modo escuro*/
+    --switch_bgURL: url('../assets/moon-stars.svg');
+}
+
+/* Estilização do modo claro */
+.light {
+    --button_borderColor: rgba(0, 0, 0, 0.5);
+    --textColor: #000000;
+    --backgroundURL: url('../assets/bg-desktop-light.jpg');
+    --buttonColor: rgba(0, 0, 0, 0.05);
+
+    /* Cores durante o evento de mousehover */
+    --buttonColor_hover: rgba(0, 0, 0, 0.02);
+    --button_borderColor_hover: #000000;
+    --icon_highlightColor: rgba(0, 0, 0, 0.1);
+
+    /* Imagem do switch | Modo claro*/
+    --switch_bgURL: url('../assets/sun.svg');
+    
+}
+
+
+/* Imagem de fundo */
+body {
+    /* Cria uma imagem de fundo que se adapta ao tamanho da tela */
+    /* color, background, repeat, position/size */
+    background: var(--backgroundURL) no-repeat top center/ cover;
+}
+
+/* Estilização global de fontes e cores */
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--textColor);
+}
+
+/* Estilização do mainContainer */
+#mainContainer {
+    width: var(--mainWitdh);
+    height: var(--mainHeight);
+    margin: 56px auto 0px; /* Centraliza horizontalmente */
+    padding: 0px 24px;
+}
+
+/* ------------------- Estilização do profile --------------------*/
+#profile { /* Alinhamento do conteúdo do profile */
+   text-align: center;
+   /* Como a imagem é inline, ela ficará centralizada */
+    padding: 24px;
+}
+
+#profile img { /* Estilização da imagem de perfil */
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+}   
+
+#profile p { /* Estilização do texto do profile */
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+/* ------------------------------------------------------------------- */
+
+/* ------------ Estilização do switch dark/light mode--------- */
+#switch {
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto;
+}
+
+#switch button { /* Estilização do botão do switch */
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: white var(--switch_bgURL) no-repeat center;
+    border-radius: 50%;
+
+    left: 0;
+    position: absolute;
+    z-index: 1;
+
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#switch span { /* Estilização do track do switch */
+    display: block;
+    width: 64px;
+    height: 24px;
+
+    background-color: var(--buttonColor);
+    border: solid 1px var(--button_borderColor);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+.light #switch button {
+    left: initial;
+    right: 0;
+}
+/* ---------------------------------------------------------------- */
+
+
+/*Estilização da lista de links */
+ul {
+    list-style: none;
+    display: flex;
+
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+/* Estilização dos links */
+ul li a{
+    transform: background 0.2s;
+    text-decoration: none;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 24px;
+    background: var(--buttonColor);
+    border: 1px solid var(--button_borderColor);
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* Para Safari e outros browsers */
+    
+    font-weight: 500;
+}
+
+ul li a:hover {
+    background: var(--buttonColor_hover);
+    border: 1.5px solid var(--button_borderColor_hover);
+}
+
+/* Estilização dos ícones das redes sociais */
+#social-links {
+    padding: 24px 0;
+    display: flex;
+
+    font-size: 24px;
+    justify-content: center;
+}
+
+/* Alinhando os ícones nos eixos x e y */
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+/* Mousehvoer dos ícones das redes sociais */
+#social-links a:hover {
+    background: var(--icon_highlightColor);
+    
+}
+
+/* Estilização do rodapé */
+footer {
+    text-align: center;
+    padding: 16px 0;
+    font-size: 14px;
+}
+
