@@ -108,6 +108,9 @@ body * {
 
     transform: translateY(-50%);
     top: 50%;
+
+    animation: slide-out 0.2s;
+    cursor: pointer
 }
 
 #switch span { /* Estilização do track do switch */
@@ -123,8 +126,12 @@ body * {
 }
 
 .light #switch button {
-    left: initial;
-    right: 0;
+    animation: slide-in 0.2s forwards;
+
+}
+
+#switch button:hover {
+    outline: 8px solid var(--icon_highlightColor);
 }
 /* ---------------------------------------------------------------- */
 
@@ -197,3 +204,22 @@ footer {
     font-size: 14px;
 }
 
+/* Animação de mudança de tema claro/escuro */
+/* Animação de entrada */
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+       left: 50%;
+    }
+}
+/* Animação de saída */
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+    to {
+       left: 0;
+    }
+}
