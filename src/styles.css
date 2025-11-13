@@ -10,9 +10,7 @@
 
 /* Variáveis globais */
 :root {
-    /* Altura e largura do mainContainer */
-    --mainWitdh: 360px;
-    --mainHeight: 712px;
+
 
     /* Cores | Modo escuro */
     --textColor: #FFFFFF;
@@ -62,8 +60,8 @@ body * {
 
 /* Estilização do mainContainer */
 #mainContainer {
-    width: var(--mainWitdh);
-    height: var(--mainHeight);
+    width: 100%;
+    max-width: 588px;
     margin: 56px auto 0px; /* Centraliza horizontalmente */
     padding: 0px 24px;
 }
