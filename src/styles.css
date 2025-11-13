@@ -31,7 +31,7 @@
 .light {
     --button_borderColor: rgba(0, 0, 0, 0.5);
     --textColor: #000000;
-    --backgroundURL: url('../assets/bg-desktop-light.jpg');
+    --backgroundURL: url('../assets/bg-mobile-light.jpg');
     --buttonColor: rgba(0, 0, 0, 0.05);
 
     /* Cores durante o evento de mousehover */
@@ -50,6 +50,7 @@ body {
     /* Cria uma imagem de fundo que se adapta ao tamanho da tela */
     /* color, background, repeat, position/size */
     background: var(--backgroundURL) no-repeat top center/ cover;
+    height: 100vh;
 }
 
 /* Estilização global de fontes e cores */
