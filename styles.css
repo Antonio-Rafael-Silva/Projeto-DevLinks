@@ -16,7 +16,7 @@
     --textColor: #FFFFFF;
     --buttonColor: rgba(255, 255, 255, 0.1);
     --button_borderColor: rgba(255, 255, 255, 0.5);
-    --backgroundURL: url('./assets/bg-mobile.jpg');
+    --backgroundURL: url('/assets/bg-mobile.jpg');
 
     /* Cores durante o evento de mousehover */
     --buttonColor_hover: rgba(255, 255, 255, 0.05);
@@ -24,14 +24,14 @@
     --icon_highlightColor: rgba(255, 255, 255, 0.2);
 
     /* Imagem do switch | Modo escuro*/
-    --switch_bgURL: url('./assets/moon-stars.svg');
+    --switch_bgURL: url('/assets/moon-stars.svg');
 }
 
 /* Estilização do modo claro */
 .light {
     --button_borderColor: rgba(0, 0, 0, 0.5);
     --textColor: #000000;
-    --backgroundURL: url('./assets/bg-mobile-light.jpg');
+    --backgroundURL: url('/assets/bg-mobile-light.jpg');
     --buttonColor: rgba(0, 0, 0, 0.05);
 
     /* Cores durante o evento de mousehover */
@@ -40,7 +40,7 @@
     --icon_highlightColor: rgba(0, 0, 0, 0.1);
 
     /* Imagem do switch | Modo claro*/
-    --switch_bgURL: url('./assets/sun.svg');
+    --switch_bgURL: url('/assets/sun.svg');
     
 }
 

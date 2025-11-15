@@ -1,11 +1,11 @@
 /* Responsividade para dispositivos móveis */
 @media (min-width: 700px) {
     :root {
-        --backgroundURL: url('./assets/bg-desktop.jpg');
+        --backgroundURL: url('/assets/bg-desktop.jpg');
     }
 
     .light {
-        --backgroundURL: url('./assets/bg-desktop-light.jpg');
+        --backgroundURL: url('/assets/bg-desktop-light.jpg');
     }
 
 
